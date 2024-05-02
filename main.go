@@ -34,8 +34,6 @@ func main() {
 		api.GET("/:token/whitelabel/:whitelabelName", tokenController.CheckToken)
 	}
 
-	fmt.Println("port ", os.Getenv("SERVER_PORT"))
-
 	// Run server
 	err := router.Run(":" + os.Getenv("SERVER_PORT"))
 	if err != nil {
